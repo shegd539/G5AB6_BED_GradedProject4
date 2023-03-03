@@ -6,6 +6,7 @@ import java.util.Optional;
 import java.util.Set;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Component;
 
 import com.greatlearning.empApi.entity.Employee;
@@ -27,8 +28,8 @@ public class EmployeeServiceImpl {
 	@Autowired
 	UserRepository userRepository;
 	
-//	@Autowired
-//	BCryptPasswordEncoder cryptPasswordEncoder;
+	@Autowired
+	BCryptPasswordEncoder cryptPasswordEncoder;
 	
 	public Role saveRole(Role role) {
 
@@ -50,7 +51,7 @@ public class EmployeeServiceImpl {
 	
 	
 	public User saveUser(User user) {
-		//user.setPassword(cryptPasswordEncoder.encode(user.getPassword()));
+		user.setPassword(cryptPasswordEncoder.encode(user.getPassword()));
 		// Handle Existing Roles
 		Set<Role> theRoles = new HashSet<>();
 		for (Role theRole : user.getRoles()) {

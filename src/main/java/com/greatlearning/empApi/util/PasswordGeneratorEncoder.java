@@ -10,5 +10,6 @@ public class PasswordGeneratorEncoder {
 		System.out.println("admin");
 		
 		System.out.println(passwordEncoder.encode("password"));
+		System.out.println(passwordEncoder.encode("$2a$10$24HKtXDtOChJ2ASZSQdr2u9rhEuOGsocUf8i3IPYHWMfTTwFi57a6"));
 	}
 }
