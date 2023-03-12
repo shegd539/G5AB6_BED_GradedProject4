@@ -8,8 +8,8 @@
 		<version>2.7.9</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.greatlearning.empApi</groupId>
-	<artifactId>com.greatlearning.empApi</artifactId>
+	<groupId>G5AB6_BED_GradedProject4</groupId>
+	<artifactId>G5AB6_BED_GradedProject4</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>G5AB6_BED_GradedProject4</name>
 	<description>G5AB6_BED_GradedProject4 project for Spring Boot</description>

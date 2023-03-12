@@ -92,6 +92,10 @@ public class EmployeeServiceImpl {
 	}
 	
 	public java.util.List<Employee> searchByFirstName(String firstName) {
+		List<Employee> employeeList=employeeRepository.findByFirstNameContainsAllIgnoreCase(firstName);
+		if(employeeList.size()==0) {
+			throw new RuntimeException("Employee firstName not found - " + firstName);
+		}
 		return employeeRepository.findByFirstNameContainsAllIgnoreCase(firstName);
 	}
 	
